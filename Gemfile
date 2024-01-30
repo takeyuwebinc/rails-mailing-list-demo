@@ -61,6 +61,9 @@ group :development do
 
   # A Ruby LSP extension for Rails
   gem "ruby-lsp-rails"
+
+  # Omakase Ruby styling for Rails
+  gem "rubocop-rails-omakase", require: false
 end
 
 group :test do
