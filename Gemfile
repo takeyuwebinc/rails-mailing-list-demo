@@ -58,6 +58,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # A Ruby LSP extension for Rails
+  gem "ruby-lsp-rails"
 end
 
 group :test do

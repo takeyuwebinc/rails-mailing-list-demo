@@ -4,21 +4,34 @@
 	"name": "Ruby on Rails & Postgres",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
-
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or the host.
 	// "forwardPorts": [3000, 5432],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "bundle install && rake db:setup",
-
 	// Configure tool-specific properties.
-	// "customizations": {},
-
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"shopify.ruby-lsp"
+			],
+			"settings": {
+				// All of these settings are scoped only to the Ruby language
+				"[ruby]": {
+					"editor.defaultFormatter": "Shopify.ruby-lsp", // Use the Ruby LSP as the default formatter
+					"editor.formatOnSave": true, // Format files automatically when saving
+					"editor.tabSize": 2, // Use 2 spaces for indentation
+					"editor.insertSpaces": true, // Use spaces and not tabs for indentantion
+					"editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+					"editor.formatOnType": true // Enable formatting while typing
+				},
+				"rubyLsp.rubyVersionManager": "none" // Disable the Ruby version manager
+			}
+		}
+	}
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
